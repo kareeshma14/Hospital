@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hospitalapp-deployment
+  labels:
+    app: hospitalapp-label
+spec:
+  replicas: 3
+  selector:
+     matchLabels:
+       app: hospitalapp-label
+  template:
+    metadata:
+      labels:
+        app: hospitalapp-label
+    spec:
+      containers:
+        - name: hospitalapp-container
+          image: kareeshma14/hospitalapp
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8096

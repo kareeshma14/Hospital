@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  docker:
+    container_name: docker
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=tiger
+      - MYSQL_DATABASE=hospitaldatabase
+    ports:
+      - 9000:3306
+  app:
+    depends_on:
+      - docker
+    image: kareeshma14/hospitalapp:docker
+    restart: on-failure
+    ports:
+      - 9001:8096
