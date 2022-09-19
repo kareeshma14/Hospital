@@ -8,7 +8,7 @@ pipeline {
   	}
   	stage ('Image') {
   	  steps {
-			bat 'docker build -t kareeshma14/hospitalapp:docker .'
+			bat 'docker build -t kareeshma14/hospitalapp:latest .'
 	  }
   	}
   	stage ('Login') {
@@ -18,7 +18,7 @@ pipeline {
   	}
   	stage ('Push') {
   	  steps {
-		bat 'docker push kareeshma14/hospitalapp'
+		bat 'docker push kareeshma14/hospitalapp:latest'
 	}
   	}
   }
