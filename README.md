@@ -1,6 +1,6 @@
 In a Hospital the management wants to computerize Doctor’s information to systematic way where user can add doctor , update doctor , fetch all doctor data. Each Employee has properties like id, name , salary, specialist. Create a Springboot based REST api application where implement the below functionality.
 
-1. Create the Doctors data . If Doctor id is already exists in the database then throw an exception “ Doctor already exists in the database”.
+1. Create the Doctors data . If Doctor id is already exists in the database then throw an exception “ Doctor already exists in the database”..
 
 2. Fetch all doctor based on their salary in descending order . If two doctor salary is same then then fetch based on their name in ascending order.
 
