@@ -20,4 +20,4 @@ After successfully complete the above Devops steps do the following work in Micr
 
 1. Deploy the Springboot Rest api into Microsoft Azure.
 
-2. Make the application Orchestration enabled by using Azure Kubernetes features.
+2. Make the application Orchestration enabled by using Azure Kubernetes features...
