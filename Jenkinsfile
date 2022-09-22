@@ -3,22 +3,22 @@ pipeline {
   stages {
     stage ('Build&Test') {
       steps {
-      	bat 'mvn clean package'
+      	sh 'mvn clean package'
       }
   	}
   	stage ('Image') {
   	  steps {
-			bat 'docker build -t kareeshma14/hospitalapp:latest .'
+			sh 'docker build -t kareeshma14/hospitalapp:latest .'
 	  }
   	}
   	stage ('Login') {
       steps {
-  	    bat 'docker login -u kareeshma14 -p Chockiee@03'
+  	    sh 'docker login -u kareeshma14 -p Chockiee@03'
   	  }
   	}
   	stage ('Push') {
   	  steps {
-		bat 'docker push kareeshma14/hospitalapp:latest'
+		sh 'docker push kareeshma14/hospitalapp:latest'
 	}
   	}
   }
